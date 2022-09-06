@@ -1,0 +1,671 @@
+*{margin: 0;padding: 0;box-sizing: border-box;-webkit-user-drag: none;direction: rtl;}
+/* Header Section */
+header {
+    width: 100%;
+    height: 50px;
+    background-color: cadetblue;
+    border-radius: 0 0 20px 20px;
+    position:fixed;
+    z-index: 999;
+}
+header img{
+    height: 50px;
+    float: left;
+    margin-left: 80px;
+    padding:5px;
+}
+.nav{
+    margin-right: 80px;
+    overflow: auto;
+}
+.nav .list-head:hover{
+    background-color: rgb(77, 121, 122);
+    border-bottom: 5px solid brown;
+}
+.nav .list-head:hover .view {
+    visibility: visible;
+}
+.nav .list-head{
+    text-align: center;
+    display: block;
+    float: right;
+    padding: 10px 15px;
+    line-height: 25px;
+    text-decoration: none;
+    color: antiquewhite;
+    font-weight: 900;
+}
+/* Main Section */
+.layout{
+    overflow: auto;
+}
+.set{
+    text-align: center;
+    width: 80%;
+    margin: auto;
+}
+.serv-title{
+    text-align: center;
+    padding-top: 80px;
+    font-size: x-larger;
+    color:brown;
+}
+.line{
+    display: inline-block;
+    width: 4em;
+    height: .2em;
+    background-color: cadetblue;
+    text-align: center;
+    margin: 5px;
+}
+.Main{
+    width: 100%;
+    min-height: 100vh;
+}
+.Parent{
+    position: relative;
+    width: 30%;
+    float: right;
+}
+.New-user:after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(26, 26, 26, 0.4);
+}
+.user:after,.service:after{
+    border-radius: 15px;
+}
+.user:after, .service:after, .event:after, .team-member:after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    top: 0;
+    right: 0;
+    opacity: 0;
+    background-color: rgb(100, 100, 100);
+    transition: .5s;
+    z-index: -1;
+}
+.user:hover:after, .service:hover:after, .event:hover:after, .team-member:hover:after, .New-user:hover:after{
+    width: 100%;
+    height: 100%;
+    opacity: 0.6; 
+}
+/* Home Section */
+.Home{
+    background-image: url(../images/braille.gif);
+    background-size: cover;
+    position: relative;
+}
+.overlay{
+    min-height: 100vh;
+    background-color: rgba(26, 26, 26, 0.8);
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.Home h1{
+    color: #faebd7;
+    font-size: xxx-large;
+}
+.intro{
+    padding: 20px;
+    color:#faebd7;
+    font-size: larger;
+    word-spacing: 5px;
+}
+.logo{
+    height: 200px;
+    padding: 10px;
+}
+.New-user{
+    width: 150px;
+    height: 50px;
+    font-size: 20px;
+    font-weight: bold;
+    color: brown; 
+    background-color: #faebd7;
+    border-style: none;
+    border-radius: 10px;
+    margin: 20px 10px;
+    cursor: pointer;
+    position: relative;
+}
+.New-user.old{
+    background-color:brown;
+    color: #faebd7;
+}
+.New-user:after{
+    background-color: rgba(26, 26, 26, 0.4);
+}
+/* Users Section*/
+.user{
+    padding: 10px;
+    /* min-height: 180px; */
+    border: 2px solid cadetblue;
+    direction: ltr;
+    margin-top: 50px;
+    border-radius: 17px;
+}
+.user:hover .more p{
+    color: white;
+    z-index: 10;
+    transition: .5s ease;
+    transition-delay: .1s;
+}
+.user.a{
+    margin: 50px 5%;
+}
+.ico{
+    font-size: 30px;
+    float: right;
+    width: 20%;
+    margin: 0 5% 0 0;
+    color: brown;
+}
+.more{
+    font-size: 25px;
+    width: 75%;
+}
+.more p{
+    direction: rtl;
+    padding: 15px;
+    font-size: 20px;
+}
+.U{
+    font-size: 30px;
+}
+.serv-title p{
+    color: black;
+    font-size: 2em;
+    padding: 20px 100px;
+    line-height: 30px;
+}
+/* Services Section */
+.service{
+    border: 2px solid cadetblue;
+    border-radius: 1em;
+    margin: 1em 0;
+    padding: 20px;
+}
+.service i , .service h2 , .service p , .service a{
+    padding: 8px;
+}
+.service i{
+    font-size: 2em;
+    color:darkred;
+}
+.service a{
+    text-decoration: none;
+    color: brown;
+}
+.service.a{
+    margin: 1em 5%;
+}
+/* Activities Section*/
+.Activities{
+    background-color: antiquewhite;
+}
+.activity{
+    margin: 1em 0;
+}
+.activity img{
+    width:100%;
+    padding: 10px;
+}
+.cover{
+    direction:rtl; 
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(214, 214, 214, 0.7);
+    position: absolute;
+    opacity: 0;
+    transition: .7s ease;
+    visibility: hidden;
+    transition:opacity 1s;
+}
+.cover .data h2, .cover .data strong, .cover .data .click{
+    display: inline-block;
+    top: 15px;
+    left: 0;
+    position: relative;
+    transition: .7s;
+    opacity: 0;
+    visibility: hidden;
+}
+.cover .data h2{
+    font-size: 1.5em;
+    color: brown;
+    transition: top 1s ,opacity .5s;
+    transition-delay: 0s;
+}
+.cover .data strong{
+    transition: top .8s ,opacity .5s;
+    transition-delay: .4s;
+}
+.cover .data .click{
+    margin-top: 5px;
+    transition: top .6s ,opacity .5s;
+    transition-delay: .6s;
+}
+.data{
+    position: absolute;
+    left:50%;
+    top:50%;
+    width: 80%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.activity:hover .cover{
+    opacity: 1;
+    visibility: visible;
+}
+.cover:hover .data h2, .cover:hover .data strong, .cover:hover .click{
+    top:0;
+    opacity: 1;
+    visibility: visible;
+}
+.activity.a{
+    margin: 1em 5%;
+}
+.search{
+    color: brown;
+    font-size:x-large;
+    padding: 5px;
+}
+.contact{
+    background-color:#1f1f1f;
+    color: #fff;
+}
+.info{
+    float: right;
+    width: 50%;
+    margin-right: 50px;
+    padding-top: 120px;
+}
+.info p{
+    font-size: 25px;
+    padding: 10px;
+}
+ul{
+    font:20px 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: 50px;
+    line-height: 30px;
+    list-style-type: none;
+}
+.info i{
+    color: brown;
+}
+.title{
+    font-size: 30px;
+}
+.image{
+    margin-left: 100px;
+    padding-top: 160px;
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+.image img{
+    width: 80%;
+    height: 350px;
+}
+.image .dot{
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color:brown;
+    display: inline-block;
+    margin: 10px;
+}
+.dot.b, .dot.c{
+    background-color:lightgrey;
+}
+.dot.b:hover{
+    background-color:brown;
+}
+.dot.c:hover{
+    background-color:brown;
+}
+/* Achievements Section*/
+.overlay.a{
+    min-height: 50vh;
+    position: relative;
+}
+
+.overlay.a i h4{
+    font-size: 30px;
+    color: aliceblue;
+    padding-top: 20px;
+}
+
+.overlay.a i{
+    font-size: 40px;
+    color:brown;
+    padding: 80px
+}
+.overlay.a i span{
+    display: block;
+    font-size: 20px;
+    color: aliceblue;
+    padding-top: 10px;
+}
+
+.Achievemets{
+    min-height: 50vh;
+    background-image: url(../images/help2.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.box{
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+/* Social Section */
+.social{
+    left: 0;
+    bottom: 50px;
+    width: 50px;
+    height: 200px;
+    background-color: cadetblue;
+    position: fixed;
+    border-radius: 10px;
+    opacity: .2;
+    transition: .5s;
+}
+.social:hover{
+    opacity: 1;
+}
+.icon{
+    font-size:30px;
+    text-align: center;
+    margin-top: 17px;
+    line-height: 20px;
+}
+.icon i{
+    color: #faebd7;
+    padding-top: 10px;
+    cursor:pointer;
+}
+/* Donate Section */
+.Donate{
+    background-color: antiquewhite;
+    position: relative;}
+.Plan{
+    border: 2px solid cadetblue;
+    border-radius: 1em;
+    margin: 1em 0;
+    padding: 20px;
+    transition: .5s;
+}
+.Plan i , .Plan h2 , .Plan p , .Plan a{
+    padding: 8px;
+}
+.Plan i{
+    font-size: xx-large;
+    color:darkred;
+}
+.Plan a{
+    text-decoration: none;
+    color: brown;
+}
+.money{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border:2px solid cadetblue;
+    margin: auto;
+    line-height: 30px;
+    font-size: 30px;
+    transition: .7s;
+}
+.cash{
+    margin: 10px;
+}
+.Plan.a{
+    margin: 1em 5%;
+}
+.payNow{
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    background-color: cadetblue;
+    border-style: none;
+    box-shadow: 0px 0px 10px;
+    border-radius: 5px;
+    transition: .7s ease;
+    cursor: pointer;
+}
+.plan:hover{
+    background-color:gainsboro;
+}
+.plan:hover .money{
+    background-color:cadetblue;
+    color:#faebd7;
+    transform: scale(1.1);
+}
+.plan:hover .payNow{
+    box-shadow: black 0 0 10px;
+    color:#faebd7;
+    transform:scale(1.1);
+}
+/* News Section*/
+.news-all{
+    background-color: #ecf2f7;
+}
+.news{
+    width: 80%;
+    margin: auto;
+}
+.report{
+    padding-top: 20px;
+}
+.event{
+    background-color:#7bc4bd;
+    min-height: 400px;
+} 
+.event img{
+    width: 100%;
+}
+.event.b{
+    background-color:#fff;
+    margin: 0 5%;
+}
+.event.a{
+    background-color:#fbae98;
+}
+.event-details{
+    text-align: center;
+    padding: 10px;
+    font-weight: 800;
+}
+.event-details p{
+    padding: 10px;
+}
+.event-details a{
+    color:blue;
+    text-decoration: none;
+}
+.event-details a:-webkit-any{
+    cursor: pointer;
+}
+.event-preview i{
+    padding-left: 10px;
+}
+.event-preview {
+    direction: ltr;
+}
+.event:after{
+    width: 100%;
+    height: 0;
+    background-color: rgb(26, 26, 26);
+}
+/* Footer Section */
+footer{
+    width: 100%;
+    height: 180px;
+    background-color:#1f1f1f;
+    color: #fff;
+}
+.end{
+    width: 80%;
+    margin: auto;
+}
+.last{
+    padding-top: 10px;
+    overflow: auto;
+}
+.overview{
+    width: 20%;
+    height: 150px;
+    float: right;
+    margin-top: 20px;
+}
+.overview.a{
+    text-align: center;
+    width: 50%;
+    margin: 0 5%;
+    padding: 40px 0;
+    border: solid bisque;
+    border-width:0 2px;
+}
+.overview.a i{
+    font-size: 20px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #fbae98;
+    border-radius: 50%;
+    transition: .3s;
+    color:#1f1f1f ;
+}
+.overview.a i:hover{
+    color: #faebd7;
+    background-color:brown;
+}
+.overview.a p{
+    font-size: 15px;
+    font-weight: 500;
+    padding-top: 10px;
+}
+.overview img{
+    height: 100px;
+    display: inline-block;
+    text-align: center;
+}
+.overview li{
+    list-style:none;
+    margin-right: auto;
+    font-weight: 500;
+    text-align: center;
+}
+.location{
+    margin-top: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+.event:after{
+    transition: .7s;
+    z-index: 0;
+}
+/* Payment Section */
+.Slogan{
+    min-height: 50vh;
+    background-image: url(../images/help.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.o{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.o h2{
+    font-size: 100px;
+    font-family: Lateef;
+    color: #faebd7;
+}
+
+/* Team Section */
+.Team{
+    background-color: antiquewhite;
+    position: relative;
+}
+.team-member img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.team-member{
+    position: relative;
+    background-color: #fff;
+    width: 30%;
+    float: right;
+    padding: 20px;
+    margin-top: 50px;
+}
+.team-member.a{
+    margin: 50px 5%;
+}
+.team-member:hover .team-contact{
+    opacity: 1;
+    background-color: rgba(26, 26, 26, 0.4);
+    visibility: visible;
+    transition: .3s ease;
+}
+.team-member:hover .name{
+    color: brown;
+    transition: .3s;
+    transition-delay: .3s;
+}
+.team-member:hover .job{
+    color: blue;
+    transition: .3s;
+    transition-delay: .4s;
+}
+.team-image{
+    width: 100%;
+    margin: auto;
+    position: relative; 
+}
+.team-contact {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0 ;
+    visibility: hidden;
+}
+.team-contact a {
+    width: 40px;
+    height: 40px;
+    display: block;
+    background-color: #7bc4bd;
+    margin-left: auto;
+}
+.team-contact a i{
+    line-height: 40px;
+    color: brown;
+}
+.team-member:after{
+    width: 100%;
+    height: 0;
+    background-color:rgb(26, 26, 26);
+    z-index: 0;
+}
